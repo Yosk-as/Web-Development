@@ -1,25 +1,33 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const contactForm = document.getElementById("contactForm");
+    
+    // --- 1. NEWSLETTER POPUP LOGIC ---
+    const modal = document.getElementById("newsletterModal");
+    const exitBtn = document.getElementById("exitModal");
 
+    // Close the Newsletter when "No thanks" is clicked
+    if (exitBtn) {
+        exitBtn.onclick = function(event) {
+            event.preventDefault();
+            modal.style.display = "none";
+        }
+    }
+
+    // --- 2. CONTACT FORM VALIDATION ---
+    const contactForm = document.getElementById("contactForm");
     if (contactForm) {
         contactForm.addEventListener("submit", function(event) {
-            // Prevent the page from actually reloading
             event.preventDefault();
 
-            // Get form values
             const name = document.getElementById("name").value;
             const email = document.getElementById("email").value;
 
-            // Simple Validation Check
             if (name === "" || email === "") {
                 alert("Please fill out all required fields.");
                 return;
             }
 
-            // Success Message (Requirement for Self-Audit)
+            // Requirement: Success message when forms are submitted
             alert("Thank you, " + name + "! Your message has been sent to Yoskar and the team.");
-            
-            // Clear the form
             contactForm.reset();
         });
     }
