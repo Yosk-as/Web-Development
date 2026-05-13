@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NextGen Gaming Center | Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <img src="logo.jpg.png" alt="NextGen Gaming Center Logo" style="height: 50px; float: left;">
+        <img src="logo.png" alt="NextGen Gaming Center Logo" style="height: 50px; float: left;">
         <h1 class="main-title">NextGen Gaming Center</h1>
         <p class="sub-slogan">The best place to get gaming news and updates!</p>
         <nav>
@@ -23,20 +23,33 @@
     </header>
 
     <main>
+        <div id="newsletterModal" class="modal">
+            <div class="modal-content">
+                <h2>Join the Newsletter!</h2>
+                <p>Get weapon meta updates sent to your email.</p>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Enter Email" required>
+                    <button type="submit" class="cta-button">Sign Up</button>
+                    <button type="button" id="exitModal" style="background:none; border:none; color:gray; cursor:pointer; display:block; margin: 10px auto;">No thanks</button>
+                </form>
+            </div>
+        </div>
+
         <section id="section-1">
-            <h2>Latest From Your Favorite Games!</h2>
+            <h2>Your Source for Competitive Edge</h2>
             <p>Reliable weapon updates and meta shifts curated by Yoskar and the team.</p>
-            <img src="hero.jpg.jpg" alt="A professional RGB gaming setup" style="width:100%; border:1px solid #333;">
+            <img src="hero.jpg" alt="A professional RGB gaming setup" style="width:100%; border:1px solid #333;">
         </section>
 
-        <section id="about-yoskar">
+        <section id="about">
             <h2>About the Founder</h2>
-            <p>I am <strong>Yoskar</strong>. I started NextGen Gaming Center to provide a clean, reliable source for weapon updates. As a player of <em>Valorant</em> and <em>CS2</em>, I wanted news that was straight to the point.</p>
+            <p>I am <strong>Yoskar</strong>. I started NextGen Gaming Center to provide a clean, reliable source for weapon updates. As a competitive player, I wanted news that was straight to the point.</p>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 NextGen Gaming Center</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
