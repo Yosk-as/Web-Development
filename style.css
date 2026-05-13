@@ -10,14 +10,13 @@ header, main, footer {
     max-width: 1100px; 
     margin: 0 auto; 
     padding: 20px; 
-    text-align: center; /* This keeps all text centered */
+    text-align: center;
 } 
 
-/* Header & Logo Styles */
 header img {
-    display: block; /* Required for margin auto to work */
-    margin: 0 auto 15px auto; /* Centered with space below */
-    height: 125px; /* Your preferred logo size */
+    display: block;
+    margin: 0 auto 15px auto;
+    height: 125px;
 }
 
 .main-title { 
